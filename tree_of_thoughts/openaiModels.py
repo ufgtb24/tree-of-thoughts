@@ -54,6 +54,7 @@ class OpenAILanguageModel(AbstractLanguageModel):
                         }
                     ]
                     response = openai.ChatCompletion.create(
+                        engine="gpt35",
                         model=self.api_model,
                         messages=messages,
                         max_tokens=max_tokens,
